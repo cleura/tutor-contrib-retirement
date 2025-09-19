@@ -1,3 +1,7 @@
+## Unreleased
+
+* [Chore] Create a new patch release for a convenient `teak.2` upgrade.
+
 ## Version 5.3.0 (2025-07-28)
 
 * [Enhancement] Support Tutor 20 and Open edX Teak.
