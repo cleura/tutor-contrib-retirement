@@ -1,3 +1,7 @@
+## Unreleased
+
+* [Chore] Create a new patch release for a convenient `teak.3` upgrade.
+
 ## Version 5.3.1 (2025-09-19)
 
 * [Chore] Create a new patch release for a convenient `teak.2` upgrade.
