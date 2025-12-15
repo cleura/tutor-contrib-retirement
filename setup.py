@@ -13,10 +13,10 @@ def load_readme():
 setup(
     name="tutor-contrib-retirement",
     use_scm_version=True,
-    url="https://github.com/hastexo/tutor-contrib-retirement",
+    url="https://github.com/cleura/tutor-contrib-retirement",
     project_urls={
-        "Code": "https://github.com/hastexo/tutor-contrib-retirement",
-        "Issue tracker": "https://github.com/hastexo/tutor-contrib-retirement/issues",  # noqa: E501
+        "Code": "https://github.com/cleura/tutor-contrib-retirement",
+        "Issue tracker": "https://github.com/cleura/tutor-contrib-retirement/issues",  # noqa: E501
     },
     license="AGPLv3",
     author="hastexo",

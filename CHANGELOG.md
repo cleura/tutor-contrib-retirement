@@ -1,3 +1,7 @@
+## Unreleased
+
+* Point release to mark the GitHub repository move.
+
 ## Version 5.3.2 (2025-12-09)
 
 * [Chore] Create a new patch release for a convenient `teak.3` upgrade.

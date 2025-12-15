@@ -5,6 +5,8 @@ This is an **experimental** plugin for
 [Tutor](https://docs.tutor.overhang.io) that enables the [user retirement 
 feature](https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/user_retire/index.html) in Open edX.
 
+This repository was previously hosted under the `hastexo` GitHub organization, and moved to `cleura` in December 2025 as part of a routine repository consolidation.
+
 Version compatibility matrix
 ----------------------------
 ￼
@@ -36,14 +38,14 @@ Limitations
 
 This plugin cannot be used for retiring accounts in the [Open edX E-Commerce Service](https://github.com/openedx/ecommerce),[^ecom] nor the [Course Discovery Service](https://github.com/openedx/course-discovery).[^discovery].
 
-[^ecom]: See [Issue #36](https://github.com/hastexo/tutor-contrib-retirement/issues/36) for background.
-[^discovery]: See [Issue #39](https://github.com/hastexo/tutor-contrib-retirement/issues/39) for background.
+[^ecom]: See [Issue #36](https://github.com/cleura/tutor-contrib-retirement/issues/36) for background.
+[^discovery]: See [Issue #39](https://github.com/cleura/tutor-contrib-retirement/issues/39) for background.
 
 
 Installation
 ------------
 
-    pip install git+https://github.com/hastexo/tutor-contrib-retirement@v5.3.2
+    pip install git+https://github.com/cleura/tutor-contrib-retirement@v5.3.2
 
 Usage
 -----
