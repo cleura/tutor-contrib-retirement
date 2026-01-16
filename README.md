@@ -18,14 +18,14 @@ appropriate one:
 | Open edX release | Tutor version     | Plugin branch | Plugin release |
 |------------------|-------------------|---------------|----------------|
 | Lilac            | `>=12.0, <13`     | Not supported | Not supported  |
-| Maple            | `>=13.2, <14`[^1] | `maple`       | 0.1.x          |
-| Nutmeg           | `>=14.0, <15`     | `nutmeg`      | 1.x.x          |
-| Olive            | `>=15.0, <16`     | `quince`      | 2.x.x          |
-| Palm             | `>=16.0, <17`     | `quince`      | 3.x.x          |
-| Quince           | `>=17.0, <18`     | `quince`      | 3.x.x          |
-| Redwood          | `>=18.0, <19`     | `main`        | 5.x.x          |
-| Sumac            | `>=19.0, <20`     | `main`        | 5.x.x          |
-| Teak             | `>=20.0, <21`     | `main`        | 5.x.x          |
+| Maple            | `>=13.2, <14`[^1] | `maple`       | `<1.0`         |
+| Nutmeg           | `>=14.0, <15`     | `nutmeg`      | `>=1.0, <2`    |
+| Olive            | `>=15.0, <16`     | `quince`      | `>=2.0, <3`    |
+| Palm             | `>=16.0, <17`     | `quince`      | `>=2.1`        |
+| Quince           | `>=17.0, <18`     | `quince`      | `>=3.2, <4`    |
+| Redwood          | `>=18.0, <19`     | `main`        | `>=4.0`        |
+| Sumac            | `>=19.0, <20`     | `main`        | `>=5.1`        |
+| Teak             | `>=20.0, <21`     | `main`        | `>=5.3`        |
 
 [^1]: For Open edX Maple and Tutor 13, you must run version 13.2.0 or
 ￼   later. That is because this plugin uses the Tutor v1 plugin API,
