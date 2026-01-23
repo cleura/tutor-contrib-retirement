@@ -1,4 +1,4 @@
-## Unreleased
+## Version 5.4.0 (2026-01-23)
 
 * [Enhancement] Support Tutor 21 and Open edX Ulmo.
 
