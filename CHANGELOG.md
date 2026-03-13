@@ -1,3 +1,7 @@
+## Unreleased
+
+* [Chore] Create a new patch release for a convenient `ulmo.2` upgrade.
+
 ## Version 5.4.0 (2026-01-23)
 
 * [Enhancement] Support Tutor 21 and Open edX Ulmo.
