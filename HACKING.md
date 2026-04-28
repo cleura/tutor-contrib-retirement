@@ -1,11 +1,27 @@
-Developer notes
-===============
+# Developer notes
 
 This document is for people who maintain and contribute to this
 repository.
 
-Commit messages
----------------
+## Style guide
+
+### Python
+
+For Python code, follow [PEP 8](https://peps.python.org/pep-0008/).
+
+### Markdown
+
+For Markdown documentation,
+
+* adhere to the [CommonMark specification](https://spec.commonmark.org/),
+* use [ATX](https://spec.commonmark.org/current/#atx-headings) instead of [setext](https://spec.commonmark.org/0.31.2/#setext-heading) headings,
+* use [fenced](https://spec.commonmark.org/current/#fenced-code-blocks) rather than [indented](https://spec.commonmark.org/current/#indented-code-block) code blocks,
+* identify the language of each fenced code block with an [info string](https://spec.commonmark.org/current/#info-string),
+* preserve existing [bullet list markers](https://spec.commonmark.org/current/#bullet-list-marker),
+* write [one sentence per line](https://sive.rs/1s):
+  ensure that every line of free-flow text outside code blocks contains exactly one English sentence.
+
+## Commit messages
 
 Commit messages follow the [Conventional
 Commits](https://www.conventionalcommits.org/) format that is also
@@ -18,8 +34,7 @@ prefixes](https://open-edx-proposals.readthedocs.io/en/latest/best-practices/oep
 to be used in commit messages via
 [Gitlint](https://jorisroovers.com/gitlint/).
 
-How to run tests
-----------------
+## How to run tests
 
 This repo uses [tox](https://tox.readthedocs.io/) for unit and
 integration tests. It does not install `tox` for you, you should
@@ -43,13 +58,7 @@ In addition, we use [GitHub
 Actions](https://docs.github.com/en/actions) to run the same checks
 on every push to GitHub.
 
-*If you absolutely must,* you can use the `--no-verify` flag to `git
-commit` and `git push` to bypass local checks, and rely on GitHub
-Actions alone. But doing so is strongly discouraged.
-
-
-How to cut a release
---------------------
+## How to cut a release
 
 This repository uses
 [bumpversion](https://pypi.org/project/bumpversion/) for managing new
