@@ -1,4 +1,4 @@
-## Unreleased
+## Version 5.4.2 (2026-06-02)
 
 * [Chore] Create a new patch release for a convenient `ulmo.3` upgrade.
 
