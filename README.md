@@ -1,19 +1,14 @@
-User Retirement Tutor plugin
-===================================
+# User Retirement Tutor plugin
 
 This is an **experimental** plugin for
-[Tutor](https://docs.tutor.overhang.io) that enables the [user retirement 
-feature](https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/user_retire/index.html) in Open edX.
+[Tutor](https://docs.tutor.overhang.io) that enables the [user retirement feature](https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/user_retire/index.html) in Open edX.
 
 This repository was previously hosted under the `hastexo` GitHub organization, and moved to `cleura` in December 2025 as part of a routine repository consolidation.
 
-Version compatibility matrix
-----------------------------
-￼
-You must install a supported release of this plugin to match the Open
-edX and Tutor version you are deploying. If you are installing this
-plugin from a branch in this Git repository, you must select the
-appropriate one:
+## Version compatibility matrix
+
+You must install a supported release of this plugin to match the Open edX and Tutor version you are deploying.
+If you are installing this plugin from a branch in this Git repository, you must select the appropriate one:
 
 | Open edX release | Tutor version     | Plugin branch | Plugin release |
 |------------------|-------------------|---------------|----------------|
@@ -28,67 +23,59 @@ appropriate one:
 | Teak             | `>=20.0, <21`     | `main`        | `>=5.3`        |
 | Ulmo             | `>=21.0, <22`     | `main`        | `>=5.4`        |
 
-[^1]: For Open edX Maple and Tutor 13, you must run version 13.2.0 or
-￼   later. That is because this plugin uses the Tutor v1 plugin API,
-￼   [which was introduced with that
-￼   release](https://github.com/overhangio/tutor/blob/master/CHANGELOG.md#v1320-2022-04-24).
+[^1]: For Open edX Maple and Tutor 13, you must run version 13.2.0 or later.
+      That is because this plugin uses the Tutor v1 plugin API, which was introduced with that release.
+      See the [GitHub changelog](https://github.com/overhangio/tutor/blob/master/CHANGELOG.md#v1320-2022-04-24).
 
+## Limitations
 
-Limitations
-------------
-
-This plugin cannot be used for retiring accounts in the [Open edX E-Commerce Service](https://github.com/openedx/ecommerce),[^ecom] nor the [Course Discovery Service](https://github.com/openedx/course-discovery).[^discovery].
+This plugin cannot be used for retiring accounts in the [Open edX E-Commerce Service](https://github.com/openedx/ecommerce),[^ecom] nor the [Course Discovery Service](https://github.com/openedx/course-discovery).[^discovery]
 
 [^ecom]: See [Issue #36](https://github.com/cleura/tutor-contrib-retirement/issues/36) for background.
+
 [^discovery]: See [Issue #39](https://github.com/cleura/tutor-contrib-retirement/issues/39) for background.
 
+## Installation
 
-Installation
-------------
+```shell
+pip install git+https://github.com/cleura/tutor-contrib-retirement@v5.4.2
+```
 
-    pip install git+https://github.com/cleura/tutor-contrib-retirement@v5.4.2
-
-Usage
------
+## Usage
 
 To enable this plugin, run:
 
-    tutor plugins enable retirement
+```shell
+tutor plugins enable retirement
+```
 
 Before starting Tutor, build the docker image:
 
-    tutor images build retirement
+```shell
+tutor images build retirement
+```
 
-After enabling this plugin, you need to restart your Tutor deployment with
-`tutor local quickstart` or `tutor k8s quickstart`. This ensures that the 
-retirement service worker is registered as an OAuth2 client in LMS and that the 
-retirement pipeline stages are correctly populated in LMS.
+After enabling this plugin, you need to restart your Tutor deployment with `tutor local quickstart` or `tutor k8s quickstart`.
+This ensures that the retirement service worker is registered as an OAuth2 client in LMS and that the retirement pipeline stages are correctly populated in LMS.
 
 To run the retirement pipeline in the Tutor local deployment:
 
-    tutor local retire-users
+```shell
+tutor local retire-users
+```
 
-This will start the `retirement-job` service and run the retirement pipeline 
-as described [here](https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/user_retire/driver_setup.html).
-If you want to run this command periodically in a local deployment, you can 
-invoke this command from a cron job on your host. 
+This will start the `retirement-job` service and run the retirement pipeline as described [here](https://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/latest/configuration/user_retire/driver_setup.html).
+If you want to run this command periodically in a local deployment, you can invoke this command from a cron job on your host.
 
-For a Kubernetes deployment, this plugin defines a [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) 
-which runs the retirement pipeline according to the schedule defined in 
-the `RETIREMENT_K8S_CRONJOB_SCHEDULE` configuration parameter.
-You can also tweak the [history
-limits](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/#jobs-history-limits)
-for the CronJob.
+For a Kubernetes deployment, this plugin defines a [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) which runs the retirement pipeline according to the schedule defined in the `RETIREMENT_K8S_CRONJOB_SCHEDULE` configuration parameter.
+You can also tweak the [history limits](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/#jobs-history-limits) for the CronJob.
 
-Configuration
--------------
+## Configuration
 
 * `RETIREMENT_EDX_OAUTH2_CLIENT_ID` (default `"retirement_service_worker"`)
 * `RETIREMENT_COOL_OFF_DAYS` (default `30`)
 * `RETIREMENT_K8S_CRONJOB_HISTORYLIMIT_FAILURE` (default `1`)
 * `RETIREMENT_K8S_CRONJOB_HISTORYLIMIT_SUCCESS` (default `3`)
-* `RETIREMENT_K8S_CRONJOB_SCHEDULE` (default `"0 0 * * *"`, once a day at 
-  midnight)
+* `RETIREMENT_K8S_CRONJOB_SCHEDULE` (default `"0 0 * * *"`, once a day at midnight)
 
-These values can be modified with `tutor config save --set
-PARAM_NAME=VALUE` commands.
+These values can be modified with `tutor config save --set PARAM_NAME=VALUE` commands.
