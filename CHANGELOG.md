@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* [Testing] Set skip_missing_interpreters = true for tox, so that it runs with whatever Python is available.
+
 ## Version 5.4.2 (2026-06-02)
 
 * [Chore] Create a new patch release for a convenient `ulmo.3` upgrade.
