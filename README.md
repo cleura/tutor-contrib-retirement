@@ -22,6 +22,7 @@ If you are installing this plugin from a branch in this Git repository, you must
 | Sumac            | `>=19.0, <20`     | `main`        | `>=5.1`        |
 | Teak             | `>=20.0, <21`     | `main`        | `>=5.3`        |
 | Ulmo             | `>=21.0, <22`     | `main`        | `>=5.4`        |
+| Verawood         | `>=22.0, <23`     | `main`        | `>=5.5`        |
 
 [^1]: For Open edX Maple and Tutor 13, you must run version 13.2.0 or later.
       That is because this plugin uses the Tutor v1 plugin API, which was introduced with that release.
