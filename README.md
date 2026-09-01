@@ -39,7 +39,7 @@ This plugin cannot be used for retiring accounts in the [Open edX E-Commerce Ser
 ## Installation
 
 ```shell
-pip install git+https://github.com/cleura/tutor-contrib-retirement@v5.4.2
+pip install git+https://github.com/cleura/tutor-contrib-retirement@v5.5.0
 ```
 
 ## Usage

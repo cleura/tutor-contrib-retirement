@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 5.5.0 (2026-09-01)
 
 * [Enhancement] Support Tutor 22 and Open edX Verawood.
 * [Testing] Set skip_missing_interpreters = true for tox, so that it runs with whatever Python is available.
