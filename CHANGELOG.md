@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 5.5.1 (2026-11-02)
 
 * [Chore] Upgrade `certifi` until upstream `edx-platform` includes the necessary fix.
 
