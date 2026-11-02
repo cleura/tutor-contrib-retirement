@@ -3,7 +3,9 @@ ENV PYTHONUNBUFFERED 1
 RUN python3 -m venv /retirement/venv/
 ENV PATH "/retirement/venv/bin:$PATH"
 RUN apt-get update && \
-    git clone --depth 1 --branch {{ OPENEDX_COMMON_VERSION }} https://github.com/openedx/edx-platform.git 
+    git clone --depth 1 --branch {{ OPENEDX_COMMON_VERSION }} https://github.com/openedx/edx-platform.git
+# Upgrade certifi until we have a new Verawood tag with this fixed upstream.
+RUN pip install "certifi>=2026.10.19" 
 WORKDIR ./edx-platform
 COPY run_retirement_pipeline.sh scripts/user_retirement/
 RUN pip install --upgrade pip && \

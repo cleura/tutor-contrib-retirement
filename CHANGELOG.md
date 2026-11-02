@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* [Chore] Upgrade `certifi` until upstream `edx-platform` includes the necessary fix.
+
 ## Version 5.5.0 (2026-09-01)
 
 * [Enhancement] Support Tutor 22 and Open edX Verawood.
