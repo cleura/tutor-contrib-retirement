@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 5.5.2 (2026-11-17)
 
 * [Chore] Create a new patch release for a convenient `verawood.2` upgrade.
 * [Chore] Drop the temporary change to override `certifi` version, fix is now included upstream.
