@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+* [Chore] Create a new patch release for a convenient `verawood.2` upgrade.
+* [Chore] Drop the temporary change to override `certifi` version, fix is now included upstream.
+
 ## Version 5.5.1 (2026-11-02)
 
 * [Chore] Upgrade `certifi` until upstream `edx-platform` includes the necessary fix.
