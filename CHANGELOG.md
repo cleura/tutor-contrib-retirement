@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+* [Testing] Update classifiers to match supported Python versions.
+* [Testing] Specify Ubuntu 22.04 as the Ubuntu release used for testing (matching the current Tutor/Open edX target release).
+
 ## Version 5.5.2 (2026-11-17)
 
 * [Chore] Create a new patch release for a convenient `verawood.2` upgrade.
